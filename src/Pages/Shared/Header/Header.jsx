@@ -1,18 +1,18 @@
 
-import { signOut } from "firebase/auth";
+// import { signOut } from "firebase/auth";
 import React, { useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+// import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
-import logo from "../../../Assets/Images/logo.png";
-import auth from "../../../firebase.init";
+import logo from "../../../Assets/Image/logo/logo.png";
+// import auth from "../../../firebase.init";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [user] = useAuthState(auth);
+//   const [user] = useAuthState(auth);
 
-  const handleSignOut = () => {
-    signOut(auth);
-  };
+//   const handleSignOut = () => {
+//     signOut(auth);
+//   };
 
   return (
     <div className="px-2 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-black sticky-top">
@@ -67,13 +67,13 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            {user ? (
+            {/* {user ? (
               <button
                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-red-600 hover:border-b-2 hover:border-orange-500 hover:pb-1"
                 onClick={handleSignOut}
               >
                 LogOut {user ? user.displayName : ""}
-              </button>
+              </button> */}
             ) : (
               <Link
                 to="/login"
