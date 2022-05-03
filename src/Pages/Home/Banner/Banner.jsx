@@ -49,7 +49,7 @@ const Banner = () => {
             />
             <div class="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
-                Stocks most beautiful <br />{" "}
+                Stocks most Beautiful <br />{" "}
                 <span className="text-orange-500">Islamic products</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
@@ -74,8 +74,8 @@ const Banner = () => {
             />
             <div class="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
-                Provide best Artificial{" "}
-                <span className="text-orange-500">Intelligence Course</span>
+                Manage your Inventory <br /> {" "}
+                <span className="text-orange-500">After Register here</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
                 Here you find the best services and courses that related to
