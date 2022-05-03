@@ -34,12 +34,12 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a
-              href="/#dealers"
+            <Link
+              to="/#dealers"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
             >
               Dealers
-            </a>
+            </Link>
           </li>
           <li>
             <Link
