@@ -53,7 +53,8 @@ const Banner = () => {
                 <span className="text-orange-500">Islamic products</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-                Here you can stocks the best Islamic products and instruments for your next business.
+                Here you can stocks the best Islamic products and instruments
+                for your next business.
               </p>
               <div className="mx-auto w-36">
                 <Link
@@ -74,11 +75,12 @@ const Banner = () => {
             />
             <div class="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
-                Manage your Inventory <br /> {" "}
+                Manage your Inventory <br />{" "}
                 <span className="text-orange-500">After Register here</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-               After Completing Registration you can manage the Inventory for your future purposes.
+                After Completing Registration you can manage the Inventory for
+                your future purposes.
               </p>
               <div className="mx-auto w-36">
                 <Link
@@ -99,12 +101,12 @@ const Banner = () => {
             />
             <div class="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
-                Provide best Artificial{" "}
-                <span className="text-orange-500">Intelligence Course</span>
+                Read latest Blogs About{" "}
+                <span className="text-orange-500">Science & Technology</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-                Here you find the best services and courses that related to
-                Artificial Intelligence for your child.
+                Here you Read the best and latest blogs that related to
+                Islamic Business, Science & Technology.
               </p>
               <div className="mx-auto w-36">
                 <Link
@@ -125,12 +127,11 @@ const Banner = () => {
             />
             <div class="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
-                Provide best Artificial{" "}
-                <span className="text-orange-500">Intelligence Course</span>
+                Find best Dealers <br />{" "}
+                <span className="text-orange-500">From Local & Abroad</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-                Here you find the best services and courses that related to
-                Artificial Intelligence for your child.
+                Here you find the best local and abroad suppliers, they provide the best products and services for business.
               </p>
               <div className="mx-auto w-36">
                 <Link
