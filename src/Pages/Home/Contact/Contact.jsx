@@ -2,8 +2,8 @@ import React from "react";
 import img from "../../../Assets/Images/Contact/contact.jpg";
 const Contact = () => {
   return (
-    <div className="container my-7 px-6 mx-auto">
-      <div id="#contact" className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-cyan-100">
+    <div id="contact" className="container my-7 px-6 mx-auto">
+      <div className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-cyan-100">
         <h1 className="text-4xl font-bold text-blue-700 my-6 font-mono">
           Contact With Us
         </h1>

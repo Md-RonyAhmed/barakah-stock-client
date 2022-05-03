@@ -42,12 +42,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/#contact"
+            <a
+              href="/#contact"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
             >
               Contact
-            </Link>
+            </a>
           </li>
           <li>
             <Link
