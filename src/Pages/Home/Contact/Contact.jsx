@@ -3,7 +3,11 @@ import img from "../../../Assets/Images/Contact/contact.jpg";
 const Contact = () => {
   return (
     <div className="container my-7 px-6 mx-auto">
-      <h1>Contact Us</h1>
+      <div id="#contact" className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-cyan-100">
+        <h1 className="text-4xl font-bold text-blue-700 my-6 font-mono">
+          Contact With Us
+        </h1>
+      </div>
       <section className="mb-32 text-gray-800">
         <div
           className="relative overflow-hidden bg-no-repeat bg-cover"
@@ -119,9 +123,6 @@ const Contact = () => {
               uppercase
               rounded
               shadow-md
-              hover:bg-blue-700 hover:shadow-lg
-              focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-              active:bg-blue-800 active:shadow-lg
               transition
               duration-150
               ease-in-out"
