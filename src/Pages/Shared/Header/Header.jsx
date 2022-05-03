@@ -27,7 +27,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="/#courses"
+              href="/#products"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
             >
               Products
@@ -35,7 +35,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="/#services"
+              href="/#dealers"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
             >
               Dealers
@@ -43,7 +43,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to="/about"
+              to="/contact"
               className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
             >
               Contact
@@ -127,7 +127,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="/courses"
+                        to="/#products"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
                       >
                         Products
@@ -135,7 +135,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="/services"
+                        to="/#dealers"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
                       >
                         Dealers
@@ -143,7 +143,7 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
-                        to="/about"
+                        to="/contact"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
                       >
                         Contact
