@@ -78,8 +78,7 @@ const Banner = () => {
                 <span className="text-orange-500">After Register here</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-                Here you find the best services and courses that related to
-                Artificial Intelligence for your child.
+               After Completing Registration you can manage the Inventory for your future purposes.
               </p>
               <div className="mx-auto w-36">
                 <Link
