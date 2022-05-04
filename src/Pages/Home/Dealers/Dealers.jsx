@@ -36,8 +36,8 @@ const Dealers = () => {
                  </svg>
                </div>
                <div className="p-6">
-                 <h5 className="text-lg font-bold mb-4">Maria Smith</h5>
-                 <p className="text-gray-500 mb-4">Frontend Developer</p>
+                 <h5 className="text-lg font-bold mb-4">Adam Smith</h5>
+                 <p className="text-gray-500 mb-4">Adam CO. Ltd</p>
                  <ul className="list-inside flex mx-auto justify-center">
                    <a href="#!" className="px-2">
                      <svg
@@ -104,7 +104,7 @@ const Dealers = () => {
                </div>
                <div className="p-6">
                  <h5 className="text-lg font-bold mb-4">Darren Randolph</h5>
-                 <p className="text-gray-500 mb-4">Marketing expert</p>
+                 <p className="text-gray-500 mb-4">Darren Randolph Ltd.</p>
                  <ul className="list-inside flex mx-auto justify-center">
                    <a href="#!" className="px-2">
                      <svg
@@ -170,8 +170,8 @@ const Dealers = () => {
                  </svg>
                </div>
                <div className="p-6">
-                 <h5 className="text-lg font-bold mb-4">Maria Smith</h5>
-                 <p className="text-gray-500 mb-4">Frontend Developer</p>
+                 <h5 className="text-lg font-bold mb-4">Peter perker</h5>
+                 <p className="text-gray-500 mb-4">Peter CO. & Ltd.</p>
                  <ul className="list-inside flex mx-auto justify-center">
                    <a href="#!" className="px-2">
                      <svg
@@ -238,8 +238,8 @@ const Dealers = () => {
                  </svg>
                </div>
                <div className="p-6">
-                 <h5 className="text-lg font-bold mb-4">Ayat Black</h5>
-                 <p className="text-gray-500 mb-4">Web designer</p>
+                 <h5 className="text-lg font-bold mb-4">Ayat Lorren</h5>
+                 <p className="text-gray-500 mb-4">Ayat Inc. & Ltd.</p>
                  <ul className="list-inside flex mx-auto justify-center">
                    <a href="#!" className="px-2">
                      <svg
