@@ -1,5 +1,5 @@
 import React from 'react';
-
+import img from '../../../Assets/Images/Sub/70_generated.jpg';
 const Subscribe = () => {
    return (
      <>
@@ -9,8 +9,8 @@ const Subscribe = () => {
              className="relative overflow-hidden bg-no-repeat bg-cover"
              style={{
                backgroundPosition: `${50}%`,
-               backgroundImage: `url('https://mdbootstrap.com/img/new/textures/full/66.jpg')`,
-               height: `${300}px`,
+               backgroundImage: `url(${img})`,
+               height: `${340}px`,
              }}
            ></div>
            <div className="container text-gray-800 px-4 md:px-12">
