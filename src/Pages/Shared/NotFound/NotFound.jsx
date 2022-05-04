@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import gif from '../../../Assets/Images/NotFound/CodePen-404-Page.gif';
 const NotFound = () => {
    return (
-     <div className="mx-auto w-full">
+     <div className="mx-auto w-full bg-white">
        <img
          className="mx-auto w-full md:w-3/4 mb-4"
          src={gif}
