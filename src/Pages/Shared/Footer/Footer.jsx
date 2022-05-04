@@ -131,11 +131,12 @@ const Footer = () => {
                Stocks
              </h6>
              <p>
-               Here you can store and manage your islamic or others business products.
+               Here you can store and manage your islamic or others business
+               products.
              </p>
            </div>
            <div className="">
-             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500">
+             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500 border-b-2 pb-2">
                Latest blogs
              </h6>
              <p className="mb-4">
@@ -160,7 +161,7 @@ const Footer = () => {
              </p>
            </div>
            <div className="">
-             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500">
+             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500 border-b-2 pb-2">
                Useful links
              </h6>
              <p className="mb-4">
@@ -178,7 +179,7 @@ const Footer = () => {
                  Dealers
                </a>
              </p>
-             <p className='mb-4'>
+             <p className="mb-4">
                <a href="#!" className="text-white">
                  Login
                </a>
@@ -190,7 +191,7 @@ const Footer = () => {
              </p>
            </div>
            <div className="">
-             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500">
+             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500 border-b-2 pb-2">
                Contact
              </h6>
              <p className="flex items-center justify-center md:justify-start mb-4">
@@ -270,10 +271,7 @@ const Footer = () => {
        </div>
        <div className="text-center p-6 bg-blue-800">
          <span>© 2022 Copyright: </span>
-         <a
-           className="text-white font-semibold"
-           href="/"
-         >
+         <a className="text-white font-semibold" href="/">
            Barakah Stocks
          </a>
        </div>
