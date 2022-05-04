@@ -126,28 +126,28 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/#products"
+                      <a
+                        href="/#products"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
                       >
                         Products
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/#dealers"
+                      <a
+                        href="/#dealers"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
                       >
                         Dealers
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link
-                        to="/#contact"
+                      <a
+                        href="/#contact"
                         className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
                       >
                         Contact
-                      </Link>
+                      </a>
                     </li>
                     <li>
                       <Link
