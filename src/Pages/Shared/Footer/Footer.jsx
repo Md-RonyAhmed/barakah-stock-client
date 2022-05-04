@@ -1,5 +1,5 @@
 import React from 'react';
-
+import img from '../../../Assets/Images/logo/logo.png';
 const Footer = () => {
    return (
      <footer className="text-center lg:text-left bg-blue-900 text-white">
@@ -8,7 +8,7 @@ const Footer = () => {
            <span>Get connected with us on social networks:</span>
          </div>
          <div className="flex justify-center">
-           <a href="#!" className="mr-6 text-gray-600">
+           <a href="#!" className="mr-6 text-blue-600">
              <svg
                aria-hidden="true"
                focusable="false"
@@ -25,7 +25,7 @@ const Footer = () => {
                ></path>
              </svg>
            </a>
-           <a href="#!" className="mr-6 text-gray-600">
+           <a href="#!" className="mr-6 text-sky-400">
              <svg
                aria-hidden="true"
                focusable="false"
@@ -42,7 +42,7 @@ const Footer = () => {
                ></path>
              </svg>
            </a>
-           <a href="#!" className="mr-6 text-gray-600">
+           <a href="#!" className="mr-6 text-red-600">
              <svg
                aria-hidden="true"
                focusable="false"
@@ -59,7 +59,7 @@ const Footer = () => {
                ></path>
              </svg>
            </a>
-           <a href="#!" className="mr-6 text-gray-600">
+           <a href="#!" className="mr-6 text-pink-600">
              <svg
                aria-hidden="true"
                focusable="false"
@@ -76,7 +76,7 @@ const Footer = () => {
                ></path>
              </svg>
            </a>
-           <a href="#!" className="mr-6 text-gray-600">
+           <a href="#!" className="mr-6 text-blue-600">
              <svg
                aria-hidden="true"
                focusable="false"
@@ -93,7 +93,7 @@ const Footer = () => {
                ></path>
              </svg>
            </a>
-           <a href="#!" className="text-gray-600">
+           <a href="#!" className="text-black">
              <svg
                aria-hidden="true"
                focusable="false"
@@ -119,6 +119,7 @@ const Footer = () => {
                className="
             uppercase
             font-semibold
+            text-yellow-500 italic
             mb-4
             flex
             items-center
@@ -126,81 +127,70 @@ const Footer = () => {
             md:justify-start
           "
              >
-               <svg
-                 aria-hidden="true"
-                 focusable="false"
-                 data-prefix="fas"
-                 data-icon="cubes"
-                 className="w-4 mr-3"
-                 role="img"
-                 xmlns="http://www.w3.org/2000/svg"
-                 viewBox="0 0 512 512"
-               >
-                 <path
-                   fill="currentColor"
-                   d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z"
-                 ></path>
-               </svg>
-               Tailwind ELEMENTS
+               <img width={65} src={img} alt="" />
+               Stocks
              </h6>
              <p>
-               Here you can use rows and columns to organize your footer
-               content. Lorem ipsum dolor sit amet, consectetur adipisicing
-               elit.
+               Here you can store and manage your islamic or others business products.
              </p>
            </div>
            <div className="">
-             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
-               Products
+             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500">
+               Latest blogs
              </h6>
              <p className="mb-4">
-               <a href="#!" className="text-gray-600">
-                 Angular
+               <a href="#!" className="text-white">
+                 Science
                </a>
              </p>
              <p className="mb-4">
-               <a href="#!" className="text-gray-600">
-                 React
+               <a href="#!" className="text-white">
+                 React JS
                </a>
              </p>
              <p className="mb-4">
-               <a href="#!" className="text-gray-600">
-                 Vue
+               <a href="#!" className="text-white">
+                 Technology
                </a>
              </p>
              <p>
-               <a href="#!" className="text-gray-600">
-                 Laravel
+               <a href="#!" className="text-white">
+                 Node JS
                </a>
              </p>
            </div>
            <div className="">
-             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500">
                Useful links
              </h6>
              <p className="mb-4">
-               <a href="#!" className="text-gray-600">
-                 Pricing
+               <a href="#!" className="text-white">
+                 Home
                </a>
              </p>
              <p className="mb-4">
-               <a href="#!" className="text-gray-600">
-                 Settings
+               <a href="#!" className="text-white">
+                 Products
                </a>
              </p>
              <p className="mb-4">
-               <a href="#!" className="text-gray-600">
-                 Orders
+               <a href="#!" className="text-white">
+                 Dealers
+               </a>
+             </p>
+             <p className='mb-4'>
+               <a href="#!" className="text-white">
+                 Login
                </a>
              </p>
              <p>
-               <a href="#!" className="text-gray-600">
-                 Help
+               <a href="#!" className="text-white">
+                 Blogs
                </a>
              </p>
            </div>
            <div className="">
-             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+             <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start text-orange-500">
                Contact
              </h6>
              <p className="flex items-center justify-center md:justify-start mb-4">
@@ -209,7 +199,7 @@ const Footer = () => {
                  focusable="false"
                  data-prefix="fas"
                  data-icon="home"
-                 className="w-4 mr-4"
+                 className="w-4 mr-4 text-blue-500"
                  role="img"
                  xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 576 512"
@@ -227,7 +217,7 @@ const Footer = () => {
                  focusable="false"
                  data-prefix="fas"
                  data-icon="envelope"
-                 className="w-4 mr-4"
+                 className="w-4 mr-4 text-orange-400"
                  role="img"
                  xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 512 512"
@@ -263,7 +253,7 @@ const Footer = () => {
                  focusable="false"
                  data-prefix="fas"
                  data-icon="print"
-                 className="w-4 mr-4"
+                 className="w-4 mr-4 text-lime-400"
                  role="img"
                  xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 512 512"
@@ -279,12 +269,12 @@ const Footer = () => {
          </div>
        </div>
        <div className="text-center p-6 bg-blue-800">
-         <span>© 2021 Copyright:</span>
+         <span>© 2022 Copyright: </span>
          <a
-           className="text-gray-600 font-semibold"
-           href="https://tailwind-elements.com/"
+           className="text-white font-semibold"
+           href="/"
          >
-           Tailwind Elements
+           Barakah Stocks
          </a>
        </div>
      </footer>
