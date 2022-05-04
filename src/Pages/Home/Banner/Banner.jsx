@@ -71,7 +71,7 @@ const Banner = () => {
             <img
               src={banner1}
               className="block w-full md:h-[600px] h-[400px] blur-[1.5px] brightness-90 contrast-75"
-              alt="Wild Landscape"
+              alt=""
             />
             <div className="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
@@ -97,7 +97,7 @@ const Banner = () => {
             <img
               src={banner4}
               className="block w-full md:h-[600px] h-[400px] blur-[1.5px] brightness-90 contrast-75"
-              alt="Camera"
+              alt=""
             />
             <div className="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">
@@ -123,7 +123,7 @@ const Banner = () => {
             <img
               src={banner5}
               className="block w-full md:h-[600px] h-[400px] blur-[1.5px] brightness-90 contrast-75"
-              alt="Exotic Fruits"
+              alt=""
             />
             <div className="carousel-caption block md:block absolute text-center">
               <h5 className="text-3xl md:text-6xl font-bold">

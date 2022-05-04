@@ -2,13 +2,13 @@ import React from "react";
 import img from "../../../Assets/Images/Contact/contact.jpg";
 const Contact = () => {
   return (
-    <div id="contact" className="container my-7 px-6 mx-auto">
+    <div id="contact" className="container mt-7 px-6 mx-auto">
       <div className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
         <h1 className="text-4xl font-bold text-blue-500 my-6 font-mono">
           Contact With Us
         </h1>
       </div>
-      <section className="mb-32 text-gray-800">
+      <section className="mb-0 text-gray-800">
         <div
           className="relative overflow-hidden bg-no-repeat bg-cover"
           style={{
