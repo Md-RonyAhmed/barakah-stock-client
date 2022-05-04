@@ -15,7 +15,6 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>} ></Route>
         <Route path='/login' element={<SignIn></SignIn>} ></Route>
         <Route path='*' element={<NotFound></NotFound>} ></Route>
-        
       </Routes>
       <Footer/>
     </div>
