@@ -2,7 +2,7 @@ import React from 'react';
 import img from '../../../Assets/Images/Sub/70_generated.jpg';
 const Subscribe = () => {
    return (
-     <div className="container my-24 px-6 mx-auto">
+     <div className="container my-16 px-6 mx-auto">
        <div className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
          <h1 className="text-4xl font-bold text-blue-500 my-6 font-mono">
            Subscribe Us
