@@ -8,7 +8,7 @@ import NotFound from "./Pages/Shared/NotFound/NotFound";
 
 function App() {
   return (
-    <div>
+    <div className="bg-gray-50">
       <Header />
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
