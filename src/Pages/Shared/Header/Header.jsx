@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-2 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-blue-900 sticky-top">
+    <div className="px-2 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-blue-900 sticky-top shadow-black shadow-sm">
       <div className="relative flex items-center justify-between">
         <div className="flex items-center">
           <img className="mr-0" height="65px" width="65px" src={logo} alt="" />
