@@ -8,7 +8,7 @@ const SignUp = () => {
      <div>
        <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
          <div className="flex flex-col items-center justify-center w-full">
-           <form className="bg-white shadow rounded lg:w-1/3 md:w-1/2 w-full h-auto p-10 mt-16">
+           <form className="bg-white shadow rounded lg:w-2/5 md:w-1/2 w-full h-auto p-10 mt-16">
              <div className="flex items-center justify-center">
                <img
                  className="mr-0"
