@@ -1,6 +1,4 @@
 import React from 'react';
-import Loading from '../../Shared/Loading/Loading';
-
 const SignIn = () => {
    return (
       <div>
