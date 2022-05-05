@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./Pages/Authentication/SignIn/SignIn";
+import BlogDetails from "./Pages/BlogDetails/BlogDetails";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home/Home";
 import Footer from "./Pages/Shared/Footer/Footer";
@@ -11,12 +12,13 @@ function App() {
     <div className="bg-gray-50">
       <Header />
       <Routes>
-        <Route path='/' element={<Home></Home>} ></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>} ></Route>
-        <Route path='/login' element={<SignIn></SignIn>} ></Route>
-        <Route path='*' element={<NotFound></NotFound>} ></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/blogs/details" element={<BlogDetails></BlogDetails>} />
+        <Route path="/login" element={<SignIn></SignIn>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
