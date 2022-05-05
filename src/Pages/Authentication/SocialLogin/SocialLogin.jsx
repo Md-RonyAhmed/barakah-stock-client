@@ -26,7 +26,8 @@ const SocialLogin = () => {
       navigate('/');
    }
      return (
-       <div>
+        <div>
+           {errorElement}
          <button
            onClick={() => signInWithGoogle()}
            aria-label="Continue with google"
