@@ -3,6 +3,7 @@ import { Link} from "react-router-dom";
 import img1 from '../../Assets/Images/Blog/Nodejs-vs-Javascript-min.webp';
 import img2 from '../../Assets/Images/Blog/images.png';
 import img3 from '../../Assets/Images/Blog/images1.jpg';
+import img4 from '../../Assets/Images/Blog/jwt.jpg';
 const Blogs = () => {
   return (
     <div className="container my-24 px-6 mx-auto mt-3">
@@ -171,11 +172,7 @@ const Blogs = () => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
             >
-              <img
-                src="https://mdbootstrap.com/img/new/standard/city/033.jpg"
-                className="w-full"
-                alt="Louvre"
-              />
+              <img src={img4} className="w-full" alt="Louvre" />
               <a href="#!">
                 <div
                   className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
@@ -186,33 +183,37 @@ const Blogs = () => {
           </div>
 
           <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pr-6">
-            <h3 className="text-2xl font-bold mb-4">Exhibition in Paris</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              What is the purpose of JWT and how does it work
+            </h3>
             <div className="text-blue-600 text-sm mb-4 flex items-center font-medium">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                className="w-4 h-4 mr-2"
-              >
-                <path
-                  fill="currentColor"
-                  d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"
-                />
-              </svg>
-              Art
+              Authentication
             </div>
-            <p className="text-gray-500">
-              Duis sagittis, turpis in ullamcorper venenatis, ligula nibh porta
-              dui, sit amet rutrum enim massa in ante. Curabitur in justo at
-              lorem laoreet ultricies. Nunc ligula felis, sagittis eget nisi
-              vitae, sodales vestibulum purus. Vestibulum nibh ipsum, rhoncus
-              vel sagittis nec, placerat vel justo. Duis faucibus sapien eget
-              tortor finibus, a eleifend lectus dictum. Cras tempor convallis
-              magna id rhoncus. Suspendisse potenti. Nam mattis faucibus
-              imperdiet. Proin tempor lorem at neque tempus aliquet. Phasellus
-              at ex volutpat, varius arcu id, aliquam lectus. Vestibulum mattis
-              felis quis ex pharetra luctus. Etiam luctus sagittis massa, sed
-              iaculis est vehicula ut.
+            <p className="text-gray-500 mb-4">
+              JWT, or JSON Web Token, is an open standard used to share security
+              information between two parties — a client and a server. Each JWT
+              contains encoded JSON objects, including a set of claims. JWTs are
+              signed using a cryptographic algorithm to ensure that the claims
+              cannot be altered after the token is issued.
             </p>
+            <p className="text-gray-500">
+              JWT is a string made up of three parts, separated by dots (.), and
+              serialized using base64. In the most common serialization format,
+              compact serialization, the JWT looks something like this:
+              xxxxx.yyyyy.zzzzz.
+              <span className="text-blue-500 text-lg underline">
+                click read more...
+              </span>
+            </p>
+            <div className="w-36 mt-2">
+              <Link
+                to="/blogs/details"
+                type="button"
+                className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 uppercase"
+              >
+                Read more...
+              </Link>
+            </div>
           </div>
         </div>
       </section>
