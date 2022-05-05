@@ -1,9 +1,9 @@
 import React from 'react';
-
+import loader from '../../../Assets/Images/Spinner/loader.gif';
 const Loading = () => {
    return (
-      <div>
-         <h1>Loading</h1>
+      <div className='w-52 h-full mx-auto visually-hidden'>
+         <img src={loader} alt="" />
       </div>
    );
 };
