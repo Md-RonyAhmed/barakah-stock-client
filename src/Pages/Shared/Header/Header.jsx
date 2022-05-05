@@ -1,9 +1,18 @@
+import { signOut } from "firebase/auth";
 import React, { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import logo from "../../../Assets/Images/logo/logo.png";
+import img from '../../../Assets/Images/Others/images.png';
+import auth from "../../../firebase.init";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = () => {
+    signOut(auth);
+  };
 
   return (
     <div className="px-2 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 bg-blue-900 sticky-top shadow-black shadow-sm">
@@ -16,7 +25,7 @@ const Header = () => {
             </span>
           </Link>
         </div>
-        <ul className="items-center hidden space-x-8 lg:flex">
+        <ul className="items-center hidden space-x-5 lg:flex">
           <li>
             <Link
               to="/"
@@ -28,11 +37,51 @@ const Header = () => {
           <li>
             <a
               href="/#products"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              className="mr-0 pr-0 font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
             >
               Products
             </a>
           </li>
+
+          {user ? (
+            <li className="space-x-5">
+              {user ? (
+                <Link
+                  to="/manage"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                >
+                  Manage
+                </Link>
+              ) : (
+                ""
+              )}
+
+              {user ? (
+                <Link
+                  to="/add"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                >
+                  Add
+                </Link>
+              ) : (
+                ""
+              )}
+
+              {user ? (
+                <Link
+                  to="/myproducts"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                >
+                  My Products
+                </Link>
+              ) : (
+                ""
+              )}
+            </li>
+          ) : (
+            ""
+          )}
+
           <li>
             <a
               href="/#dealers"
@@ -57,14 +106,47 @@ const Header = () => {
               Blogs
             </Link>
           </li>
-          <li>
-            <Link
-              to="/login"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
-            >
-              LogIn
-            </Link>
+          <li className="mr-0 pr-0">
+            {user ? (
+              <button
+                className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-3 py-2 text-center"
+                onClick={handleSignOut}
+              >
+                LogOut
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              >
+                LogIn
+              </Link>
+            )}
           </li>
+          {user?<p className="text-white rounded border-yellow-500 border-2 px-2 py-1">
+            {user ? user.displayName.slice(0, 8) : ""}
+          </p>:''}
+          {user ? (
+            <img
+              width="30px"
+              className="w-8 h-8 rounded-full cursor-pointer"
+              src={
+                user ? (
+                  user.photoURL
+                ) : (
+                  <img
+                    width="30px"
+                    className=" ml-0 pl-0 rounded-full"
+                    src={img}
+                    alt=""
+                  />
+                )
+              }
+              alt=""
+            />
+          ) : (
+            ""
+          )}
         </ul>
         <div className="lg:hidden">
           <button
