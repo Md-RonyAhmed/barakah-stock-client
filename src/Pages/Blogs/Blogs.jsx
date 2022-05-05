@@ -2,6 +2,7 @@ import React from "react";
 import { Link} from "react-router-dom";
 import img1 from '../../Assets/Images/Blog/Nodejs-vs-Javascript-min.webp';
 import img2 from '../../Assets/Images/Blog/images.png';
+import img3 from '../../Assets/Images/Blog/images1.jpg';
 const Blogs = () => {
   return (
     <div className="container my-24 px-6 mx-auto mt-3">
@@ -29,7 +30,7 @@ const Blogs = () => {
             </div>
           </div>
 
-          <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6">
+          <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 mb-6 lg:pl-6">
             <h3 className="text-2xl font-bold mb-2">
               Difference between JavaScript and Node JS
             </h3>
@@ -120,11 +121,7 @@ const Blogs = () => {
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
             >
-              <img
-                src="https://mdbootstrap.com/img/new/standard/city/079.jpg"
-                className="w-full"
-                alt="Louvre"
-              />
+              <img src={img3} className="w-full" alt="Louvre" />
               <a href="#!">
                 <div
                   className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
@@ -135,43 +132,38 @@ const Blogs = () => {
           </div>
 
           <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 mb-6 lg:pl-6">
-            <h3 className="text-2xl font-bold mb-4">Stock market boom</h3>
+            <h3 className="text-2xl font-bold mb-4">
+              Differences between SQL and NoSQL databases.
+            </h3>
             <div className="text-yellow-600 text-sm mb-4 flex items-center font-medium">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 640 512"
-                className="w-4 h-4 mr-2"
-              >
-                <path
-                  fill="currentColor"
-                  d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"
-                />
-              </svg>
-              Business
+              Database Technology
             </div>
-            <p className="text-gray-500 mb-6 text-sm">
-              Published <u>10.01.2022</u> by
-              <a href="#!">Joe Svan</a>
+            <p className="text-gray-500 mb-4">
+              SQL databases use structured query language and have a pre-defined
+              schema for defining and manipulating data. SQL is one of the most
+              versatile and widely used query languages available, making it a
+              safe choice for many use cases.
             </p>
             <p className="text-gray-500">
-              Sed sollicitudin purus sed nulla dignissim ullamcorper. Aenean
-              tincidunt vulputate libero, nec imperdiet sapien pulvinar id.
-              Nullam scelerisque odio vel lacus faucibus, tincidunt feugiat
-              augue ornare. Proin ac dui vel lectus eleifend vestibulum et
-              lobortis risus. Nullam in commodo sapien. Curabitur ut erat congue
-              sem finibus eleifend egestas eu metus. Sed ut dolor id magna
-              rutrum ultrices ut eget libero. Duis vel porttitor odio. Ut
-              pulvinar sed turpis ornare tincidunt. Donec luctus, mi euismod
-              dignissim malesuada, lacus lorem commodo leo, tristique blandit
-              ante mi id metus. Integer et vehicula leo, vitae interdum lectus.
-              Praesent nulla purus, commodo at euismod nec, blandit ultrices
-              erat. Aliquam eros ipsum, interdum et mattis vitae, faucibus vitae
-              justo. Nulla condimentum hendrerit leo, in feugiat ipsum
-              condimentum ac. Maecenas sed blandit dolor.
+              NoSQL databases have dynamic schemas for unstructured data, and
+              the data is stored in many ways. You can use column-oriented,
+              document-oriented, graph-based, or KeyValue store for your data.
+              <span className="text-blue-500 text-lg underline">
+                click read more...
+              </span>
             </p>
+            <div className="w-36 mt-2">
+              <Link
+                to="/blogs/details"
+                type="button"
+                className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 uppercase"
+              >
+                Read more...
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="flex flex-wrap lg:flex-row-reverse mb-12">
+        <div className="flex flex-wrap lg:flex-row-reverse mb-12 mt-8">
           <div className="grow-0 shrink-0 basis-auto w-full lg:w-6/12 lg:pl-6 mb-6 lg:mb-0">
             <div
               className="relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg"
