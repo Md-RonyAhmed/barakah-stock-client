@@ -2,6 +2,7 @@ import React from 'react';
 import img1 from "../../Assets/Images/Blog/Nodejs-vs-Javascript-min.webp";
 import img2 from "../../Assets/Images/Blog/images.png";
 import img3 from '../../Assets/Images/Blog/images1.jpg';
+import img4 from '../../Assets/Images/Blog/jwt.jpg';
 const BlogDetails = () => {
    return (
      <div className="container my-16 px-6 mx-auto mt-3">
@@ -187,7 +188,10 @@ const BlogDetails = () => {
          </p>
        </section>
        <section className="mb-32 text-gray-800">
-         <img src={img2} className="w-full shadow-lg rounded-lg mb-6" alt="" />
+         <div className="text-blue-600 text-xl mb-4 flex items-center font-medium">
+           Authentication
+         </div>
+         <img src={img4} className="w-full shadow-lg rounded-lg mb-6" alt="" />
 
          <div className="flex items-center mb-6">
            <img
@@ -208,40 +212,57 @@ const BlogDetails = () => {
          </div>
 
          <h1 className="font-bold text-3xl mb-6">
-           Differences Between JavaScript vs Node JS
+           What is the purpose of JWT and how does it work
          </h1>
 
          <p className="text-justify">
-           JavaScript is a programming language, which runs in web browsers.
-           Whereas Node.js is an interpreter or running environment for
-           JavaScript, which holds a lot of requiring libraries and all.
-           JavaScript is basically one standard defining programming language;
-           it can run any browser with a default browser running environment. It
-           is a very strong language normally used for a web application on any
-           verification or any specific business logic. We need to append in the
-           screen without page refreshing. JavaScript also helps to use Ajax at
-           any time, which helps us call any server-side script for given
-           dynamic data based on the requirement. It also helps with generating
-           dynamic HTML tables based on business requirement. JQuery is one of
-           the popular libraries to make comfortable use of JavaScript by
-           avoiding to write a lot of code.
+           JWT, or JSON Web Token, is an open standard used to share security
+           information between two parties — a client and a server. Each JWT
+           contains encoded JSON objects, including a set of claims. JWTs are
+           signed using a cryptographic algorithm to ensure that the claims
+           cannot be altered after the token is issued.
          </p>
          <p className="mt-3">
-           Node.js also holds a lot of relative libraries, which we normally use
-           in javascript for general purpose programming language. It is
-           actually a kind of environment or interpreter that can represent
-           JavaScript or run any javascript program. It mainly helps us execute
-           some non-blocking operation like some operating system special
-           information like certificate details or hardware details; we may use
-           node js on the same, which help us do it, and JavaScript normal
-           programming will not help us on the same. Normally all browsers have
-           a JavaScript engine that helps us to run javascript in a web browser.
-           Spider monkey (FireFox), JavaScript Core (Safari), V8 (Google Chrome)
-           are some popular javascript engine using verities browsers. But node
-           js is using the V8 engine directly, with some libraries to do some
-           I/O or networking operations. It actually helps us use JavaScript
-           from outside of the browser, like creating, writing or executing one
-           shell script, some back-end services, or running on hardware.
+           JSON stands for JavaScript Object Notation and is a text-based format
+           for transmitting data across web applications. It stores information
+           in an easy-to-access manner, both for developers and computers. It
+           can be used as a data format by any programming language and is
+           quickly becoming the preferred syntax for APIs, surpassing XML.
+         </p>
+         <p className="mt-3">
+           Now that you understand JSON as a data text format, you may be
+           wondering What are tokens? To put it simply, a token is a string of
+           data that represents something else, such as an identity. In the case
+           of authentication, a non-JWT based token is a string of characters
+           that allow the receiver to validate the sender’s identity. The
+           important distinction here is lack of meaning within the characters
+           themselves.
+         </p>
+         <p className="mt-3">
+           JWTs differ from other web tokens in that they contain a set of
+           claims. Claims are used to transmit information between two parties.
+           What these claims are depends on the use case at hand. For example, a
+           claim may assert who issued the token, how long it is valid for, or
+           what permissions the client has been granted. A JWT is a string made
+           up of three parts, separated by dots (.), and serialized using
+           base64. In the most common serialization format, compact
+           serialization, the JWT looks something like this: xxxxx.yyyyy.zzzzz.
+           Once decoded, you will get two JSON strings: The header and the
+           payload. The signature. The JOSE (JSON Object Signing and Encryption)
+           header contains the type of token — JWT in this case — and the
+           signing algorithm. The payload contains the claims. This is displayed
+           as a JSON string, usually containing no more than a dozen fields to
+           keep the JWT compact. This information is typically used by the
+           server to verify that the user has permission to perform the action
+           they are requesting. There are no mandatory claims for a JWT, but
+           overlaying standards may make claims mandatory. For example, when
+           using JWT as bearer access token under OAuth2.0, iss, sub, aud, and
+           exp must be present. some are more common than others. The signature
+           ensures that the token hasn’t been altered. The party that creates
+           the JWT signs the header and payload with a secret that is known to
+           both the issuer and receiver, or with a private key known only to the
+           sender. When the token is used, the receiving party verifies that the
+           header and payload match the signature.
          </p>
        </section>
      </div>
