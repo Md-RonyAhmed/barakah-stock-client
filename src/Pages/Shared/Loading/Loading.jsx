@@ -2,7 +2,7 @@ import React from 'react';
 import loader from '../../../Assets/Images/Spinner/loader.gif';
 const Loading = () => {
    return (
-      <div className='w-52 h-full mx-auto visually-hidden'>
+      <div className='w-52 h-full mx-auto'>
          <img src={loader} alt="" />
       </div>
    );
