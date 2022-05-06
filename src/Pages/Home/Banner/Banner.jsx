@@ -58,7 +58,7 @@ const Banner = () => {
               </p>
               <div className="mx-auto w-36">
                 <Link
-                  to="/login"
+                  to="/blogs"
                   type="button"
                   className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
                 >
@@ -105,8 +105,8 @@ const Banner = () => {
                 <span className="text-orange-500">Science & Technology</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-                Here you Read the best and latest blogs that related to
-                Islamic Business, Science & Technology.
+                Here you Read the best and latest blogs that related to Islamic
+                Business, Science & Technology.
               </p>
               <div className="mx-auto w-36">
                 <Link
@@ -131,7 +131,8 @@ const Banner = () => {
                 <span className="text-orange-500">From Local & Abroad</span>
               </h5>
               <p className="text-lg md:text-xl text-white font-bold my-8">
-                Here you find the best local and abroad suppliers, they provide the best products and services for business.
+                Here you find the best local and abroad suppliers, they provide
+                the best products and services for business.
               </p>
               <div className="mx-auto w-36">
                 <Link
