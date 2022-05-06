@@ -39,6 +39,7 @@ const SocialLogin = () => {
       toastId: "success1",
     });
   }
+  console.log(googleUser);
   return (
     <div>
       {errorElement}
