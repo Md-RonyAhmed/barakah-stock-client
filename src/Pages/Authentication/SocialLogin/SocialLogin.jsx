@@ -24,10 +24,10 @@ const SocialLogin = () => {
       );
    }
    if (googleUser || githubUser || facebookUser) {
-     toast.success("Log In Successfully", {
+     navigate("/");
+     toast.success(`Log In Successfully`, {
        toastId: "success1"
      });
-     navigate("/");
    }
   return (
     <div>

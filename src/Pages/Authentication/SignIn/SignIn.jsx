@@ -1,8 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../../Assets/Images/logo/logo.png";
+import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 const SignIn = () => {
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
+  let errorElement;
+  
+  if (loading || sending) {
+    return <Loading></Loading>;
+  }
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
+  if (error) {
+    errorElement = <p className="text-red-600">Error: {error?.message}</p>;
+  }
   return (
     <div>
       <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
@@ -91,7 +119,24 @@ const SignIn = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-8">
+            <div className="flex justify-between items-center my-3">
+              <div className="form-group form-check">
+                <input
+                  className="cursor-pointer mx-2"
+                  type="checkbox"
+                  name=""
+                  defaultChecked
+                />
+                Remember me
+              </div>
+              <button
+                // onClick={resetPassword}
+                className="text-blue-600 hover:underline hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out"
+              >
+                Forget password?
+              </button>
+            </div>
+            <div className="mt-5">
               <button
                 type="submit"
                 className="focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
