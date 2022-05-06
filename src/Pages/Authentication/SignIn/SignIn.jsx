@@ -49,9 +49,9 @@ const SignIn = () => {
       const email = emailRef.current.value;
       if (email) {
         await sendPasswordResetEmail(email);
-        toast("Sent email");
+        toast.success("Verification email sent!");
       } else {
-        toast("Please enter your email address");
+        toast.warn("Please enter your email address");
       }
     };
 
