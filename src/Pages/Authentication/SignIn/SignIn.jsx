@@ -45,7 +45,15 @@ const SignIn = () => {
   
 
   };
-  
+    const resetPassword = async () => {
+      const email = emailRef.current.value;
+      if (email) {
+        await sendPasswordResetEmail(email);
+        toast("Sent email");
+      } else {
+        toast("Please enter your email address");
+      }
+    };
 
   return (
     <div>
@@ -151,7 +159,7 @@ const SignIn = () => {
                 Remember me
               </div>
               <button
-                // onClick={resetPassword}
+                onClick={resetPassword}
                 className="text-blue-600 hover:underline hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out"
               >
                 Forget password?
