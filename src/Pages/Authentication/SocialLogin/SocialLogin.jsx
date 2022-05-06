@@ -3,6 +3,8 @@ import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 
 import { useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import { toast } from "react-toastify";
+
 
 const SocialLogin = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -21,13 +23,15 @@ const SocialLogin = () => {
         </p>
       );
    }
-
    if (googleUser || githubUser || facebookUser) {
-      navigate('/');
+     toast.success("Log In Successfully", {
+       toastId: "success1"
+     });
+     navigate("/");
    }
-     return (
-        <div>
-           {errorElement}
+  return (
+    <div>
+         {errorElement}
          <button
            onClick={() => signInWithGoogle()}
            aria-label="Continue with google"
@@ -62,7 +66,8 @@ const SocialLogin = () => {
              Continue with Google
            </p>
          </button>
-           <button onClick={() => signInWithGithub()}
+         <button
+           onClick={() => signInWithGithub()}
            aria-label="Continue with github"
            type="button"
            className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"
@@ -84,7 +89,8 @@ const SocialLogin = () => {
              Continue with Github
            </p>
          </button>
-           <button onClick={() => signInWithFacebook()}
+         <button
+           onClick={() => signInWithFacebook()}
            aria-label="Continue with facebook"
            type="button"
            className="focus:outline-none  focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 py-3.5 px-4 border rounded-lg border-gray-700 flex items-center w-full mt-4"

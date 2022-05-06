@@ -6,12 +6,12 @@ import Subscribe from '../Subscribe/Subscribe';
 
 const Home = () => {
    return (
-      <div>
-         <Banner />
-         <Dealers/>
-         <Contact />
-         <Subscribe/>
-      </div>
+     <div>
+       <Banner />
+       <Dealers />
+       <Contact />
+       <Subscribe />
+     </div>
    );
 };
 

@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import RequireAuth from "./Pages/Authentication/RequireAuth/RequireAuth";
 import SignIn from "./Pages/Authentication/SignIn/SignIn";
 import SignUp from "./Pages/Authentication/SignUp/SignUp";
@@ -9,6 +10,7 @@ import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 
+
 function App() {
   return (
     <div className="bg-gray-50">
@@ -16,15 +18,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        <Route path="/blogs/details" element={
-          <RequireAuth>
-            <BlogDetails/>
-          </RequireAuth>
-        } />
+        <Route
+          path="/blogs/details"
+          element={
+            <RequireAuth>
+              <BlogDetails />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<SignIn></SignIn>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>} />
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer/>
       <Footer />
     </div>
   );

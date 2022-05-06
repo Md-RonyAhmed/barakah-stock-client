@@ -2,6 +2,7 @@ import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import logo from "../../../Assets/Images/logo/logo.png";
 import img from '../../../Assets/Images/Others/images.png';
 import auth from "../../../firebase.init";
@@ -12,6 +13,7 @@ const Header = () => {
 
   const handleSignOut = () => {
     signOut(auth);
+    toast.error("Oopps! you are Logged Out!");
   };
 
   return (
