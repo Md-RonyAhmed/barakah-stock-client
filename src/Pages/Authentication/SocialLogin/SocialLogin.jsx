@@ -1,6 +1,6 @@
 import React from "react";
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import { toast } from "react-toastify";
@@ -10,7 +10,10 @@ const SocialLogin = () => {
   const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
   const [signInWithFacebook, facebookUser, facebookLoading, facebookError] = useSignInWithFacebook(auth);
-   const navigate = useNavigate();
+  const navigate = useNavigate();
+   const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
    
    let errorElement;
    if (googleLoading || githubLoading || facebookLoading) {
@@ -24,7 +27,7 @@ const SocialLogin = () => {
       );
    }
    if (googleUser || githubUser || facebookUser) {
-     navigate("/");
+     navigate(from, { replace: true });
      toast.success(`Log In Successfully`, {
        toastId: "success1"
      });

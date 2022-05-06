@@ -4,6 +4,7 @@ import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import img from "../../../Assets/Images/logo/logo.png";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
@@ -19,23 +20,41 @@ const SignIn = () => {
 
   let from = location.state?.from?.pathname || "/";
   let errorElement;
-  
+
   if (loading || sending) {
     return <Loading></Loading>;
   }
 
   if (user) {
     navigate(from, { replace: true });
+     toast.success(`Log In Successfully`, {
+       toastId: "success1",
+     });
   }
 
   if (error) {
     errorElement = <p className="text-red-600">Error: {error?.message}</p>;
   }
+
+   const handleSubmit = (event) => {
+     event.preventDefault();
+     const email = emailRef.current.value;
+     const password = passwordRef.current.value;
+
+     signInWithEmailAndPassword(email, password);
+  
+
+  };
+  
+
   return (
     <div>
       <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
         <div className="flex flex-col items-center justify-center w-full">
-          <form className="bg-white shadow rounded lg:w-2/5  md:w-1/2 w-full h-auto p-10 mt-16">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white shadow rounded lg:w-2/5  md:w-1/2 w-full h-auto p-10 mt-16"
+          >
             <div className="flex items-center justify-center">
               <img
                 className="mr-0"
@@ -80,6 +99,7 @@ const SignIn = () => {
                 Email
               </label>
               <input
+                ref={emailRef}
                 aria-labelledby="email"
                 name="email"
                 type="email"
@@ -97,6 +117,7 @@ const SignIn = () => {
               </label>
               <div className="relative flex items-center justify-center">
                 <input
+                  ref={passwordRef}
                   id="pass"
                   type="password"
                   className="bg-gray-100 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
@@ -137,6 +158,7 @@ const SignIn = () => {
               </button>
             </div>
             <div className="mt-5">
+              {errorElement}
               <button
                 type="submit"
                 className="focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
