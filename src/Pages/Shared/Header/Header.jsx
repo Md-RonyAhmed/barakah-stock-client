@@ -14,7 +14,7 @@ const Header = () => {
 
   const handleSignOut = () => {
     signOut(auth);
-    toast.error("Oopps! you are Logged Out!");
+    toast.warning("Oopps! you are Logged Out!");
   };
 
   return (
