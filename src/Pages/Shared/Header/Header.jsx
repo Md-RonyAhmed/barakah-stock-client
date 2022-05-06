@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import logo from "../../../Assets/Images/logo/logo.png";
 import img from '../../../Assets/Images/Others/images.png';
 import auth from "../../../firebase.init";
+import { CustomLink } from "../../CustomLink/CustomLink";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,17 +30,17 @@ const Header = () => {
         </div>
         <ul className="items-center hidden space-x-5 lg:flex">
           <li>
-            <Link
+            <CustomLink
               to="/"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
             >
               Home
-            </Link>
+            </CustomLink>
           </li>
           <li>
             <a
               href="/#products"
-              className="mr-0 pr-0 font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              className="mr-0 pr-0 font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
             >
               Products
             </a>
@@ -50,7 +51,7 @@ const Header = () => {
               {user ? (
                 <Link
                   to="/manage"
-                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
                   Manage
                 </Link>
@@ -61,7 +62,7 @@ const Header = () => {
               {user ? (
                 <Link
                   to="/add"
-                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
                   Add
                 </Link>
@@ -72,7 +73,7 @@ const Header = () => {
               {user ? (
                 <Link
                   to="/myproducts"
-                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
                   My Products
                 </Link>
@@ -87,7 +88,7 @@ const Header = () => {
           <li>
             <a
               href="/#dealers"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
             >
               Dealers
             </a>
@@ -95,18 +96,18 @@ const Header = () => {
           <li>
             <a
               href="/#contact"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
             >
               Contact
             </a>
           </li>
           <li>
-            <Link
+            <CustomLink
               to="/blogs"
-              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+              className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
             >
               Blogs
-            </Link>
+            </CustomLink>
           </li>
           <li className="mr-0 pr-0">
             {user ? (
@@ -117,12 +118,12 @@ const Header = () => {
                 LogOut
               </button>
             ) : (
-              <Link
+              <CustomLink
                 to="/login"
-                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:border-b-2 hover:border-orange-500 hover:pb-1"
+                className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
               >
                 LogIn
-              </Link>
+              </CustomLink>
             )}
           </li>
           {user?<p className="text-white rounded border-yellow-500 border-2 px-2 py-1">
