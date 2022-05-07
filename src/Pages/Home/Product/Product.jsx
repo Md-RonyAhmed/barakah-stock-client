@@ -15,7 +15,7 @@ const Product = ({ product }) => {
            </p>
            <p className="text-gray-700 text-base mb-4">Supplier: {dealer}</p>
            <p className="text-gray-700 text-base mb-4">
-             Quantity:
+             Stock Quantity:
              <span className="bg-slate-200 py-1 px-4 ml-2 text-orange-600 rounded-full">
                {quantity}
              </span>{" "}
