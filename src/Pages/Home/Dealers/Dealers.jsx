@@ -1,6 +1,6 @@
 import React from "react";
-import img1 from "../../../Assets/Images/Dealers/vecteezy_close-up-view-senior-attractive-man-smiling-looking_3162336.jpg";
-import img2 from "../../../Assets/Images/Dealers/vecteezy_handsome-cheerful-bearded-man-smiles-gladfully-dressed-in_7421470_872.jpg";
+import img1 from "../../../Assets/Images/Dealers/vecteezy_close-up-view-senior-attractive-man-smiling-looking_3162336-min.jpg";
+import img2 from "../../../Assets/Images/Dealers/vecteezy_handsome-cheerful-bearded-man-smiles-gladfully-dressed-in_7421470_872-min.jpg";
 
 const Dealers = () => {
   return (
