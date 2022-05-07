@@ -3,6 +3,7 @@ import Product from "../Product/Product";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Loading from "../../Shared/Loading/Loading";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -35,7 +36,16 @@ const Products = () => {
             <Loading></Loading>
           </div>
         )}
-      </div>
+        </div>
+        <div className="md:w-1/6 mt-2 w-1/2 mx-auto">
+          <Link
+            to="/manage"
+            type="button"
+            className="block px-6 mx-auto text-center py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            MANAGE INVENTORIES
+          </Link>
+        </div>
     </div>
   );
 };
