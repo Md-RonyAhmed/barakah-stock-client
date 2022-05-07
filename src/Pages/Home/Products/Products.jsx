@@ -19,20 +19,21 @@ const Products = () => {
       })()
    },[limit])
   return (
-    <div id="products" className="container my-16 px-6 mx-auto mt-6">
+    <div id="products" className="container my-16 px-6 mt-6">
       <div className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
         <h1 className="text-4xl font-bold text-blue-500 my-6 font-mono">
           Top Products
         </h1>
       </div>
-      <div>
+      <div className="container mx-auto p-6 grid md:grid-cols-3 gap-4">
         {products?.length ? (
           products.map((product) => (
             <Product key={product._id} product={product}></Product>
           ))
         ) : (
-          <div>
-            <Loading></Loading>{" "}
+          <div className="md:ml-[500px]">
+             
+              <Loading></Loading>
           </div>
         )}
       </div>
