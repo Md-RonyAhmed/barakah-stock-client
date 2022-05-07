@@ -1,34 +1,35 @@
 import React from 'react';
 
 const Product = ({ product }) => {
-   const { name, img,price,desc,dealer } = product;
+   const { name, img,price,desc,dealer,quantity } = product;
    return (
      <>
-       <div class="md:flex flex-col bg-white border-2 p-4">
-         <h2 class="mb-2 font-bold text-2xl">Card Name</h2>
-         <div class="mb-4 flex flex-wrap">
-           <span class="mr-2">Link 1</span>
-           <span class="mr-2">Link 2</span>
+       <div className="md:flex flex-col p-4 rounded-lg shadow-lg bg-white max-w-sm mt-6">
+         <h2 className="mb-2 font-bold text-2xl text-center text-blue-500 bg-blue-50 p-2 rounded-lg">
+           {name}
+         </h2>
+         <img className="rounded-lg md:h-72 mb-4" src={img} alt="" />
+         <div className="mb-4 flex flex-wrap flex-col">
+           <p className="text-gray-700 text-base mb-4">
+             Price: <span className="text-orange-600 text-lg">{price} bdt</span>
+           </p>
+           <p className="text-gray-700 text-base mb-4">Supplier: {dealer}</p>
+           <p className="text-gray-700 text-base mb-4">
+             Quantity:
+             <span className="bg-slate-200 py-1 px-4 ml-2 text-orange-600 rounded-full">
+               {quantity}
+             </span>{" "}
+           </p>
          </div>
-         <p class="text-md text-justify">Some Description</p>
-         <div class="flex flex-wrap mt-auto pt-3 text-xs">
-           <p class="mr-2 mb-2">Tag #1</p>
-           <p class="mr-2 mb-2">Tag #2</p>
-         </div>
-       </div>
-       <div class="col-span-1 flex flex-col bg-white border-2 p-4">
-         <h2 class="mb-2 font-bold text-2xl">Card Name</h2>
-         <div class="mb-4 flex flex-wrap">
-           <span class="mr-2">Link 1</span>
-           <span class="mr-2">Link 2</span>
-         </div>
-         <p class="text-md text-justify">
-           Some Description Lorem ipsum dolor sit amet, consectetur adipiscing
-           elit. Maecenas vel enim lectus.
-         </p>
-         <div class="flex flex-wrap mt-auto pt-3 text-xs">
-           <p class="mr-2 mb-2">Tag #1</p>
-           <p class="mr-2 mb-2">Tag #2</p>
+         <p className="text-gray-700 text-base mb-4">{desc}</p>
+         <div className="flex flex-wrap mt-auto pt-3 text-xs">
+           <button
+             //   onClick={() => navigateToServiceDetail(id)}
+             type="button"
+             className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+           >
+             UPDATE STOCK
+           </button>
          </div>
        </div>
      </>

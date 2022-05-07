@@ -19,8 +19,8 @@ const Products = () => {
       })()
    },[limit])
   return (
-    <div id="products" className="container my-16 px-6 mt-6">
-      <div className="border-l-4 mb-6 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
+    <div id="products" className="container px-6 mt-6">
+      <div className="border-l-4 mb-0 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
         <h1 className="text-4xl font-bold text-blue-500 my-6 font-mono">
           Top Products
         </h1>
