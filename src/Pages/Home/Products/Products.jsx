@@ -6,18 +6,18 @@ import Loading from "../../Shared/Loading/Loading";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-   const [limit, setLimit] = useState(6);
-   const url = `http://localhost:5000/products?limit=${limit}`;
-   useEffect(() => {
-      (async () => {
-         const { data } =await axios.get(url);
-         if (!data?.success) {
-            setProducts([]);
-           return toast.error(data.error);
-         }
-         setProducts(data?.data);
-      })()
-   },[limit])
+  const [limit, setLimit] = useState(6);
+  const url = `http://localhost:5000/products?limit=${limit}`;
+  useEffect(() => {
+    (async () => {
+      const { data } = await axios.get(url);
+      if (!data?.success) {
+        setProducts([]);
+        return toast.error(data.error);
+      }
+      setProducts(data?.data);
+    })();
+  }, [limit]);
   return (
     <div id="products" className="container px-6 mt-6">
       <div className="border-l-4 mb-0 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
@@ -32,8 +32,7 @@ const Products = () => {
           ))
         ) : (
           <div className="md:ml-[500px]">
-             
-              <Loading></Loading>
+            <Loading></Loading>
           </div>
         )}
       </div>
