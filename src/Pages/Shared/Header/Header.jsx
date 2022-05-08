@@ -128,7 +128,7 @@ const Header = () => {
           </li>
           {user ? (
             <p className="text-white rounded border-yellow-500 border-2 px-2 py-1">
-              {user ? user.displayName.slice(0, 8) : ""}
+              {user ? user?.displayName.slice(0, 8) : ""}
             </p>
           ) : (
             ""
@@ -139,13 +139,13 @@ const Header = () => {
               className="w-8 h-8 rounded-full cursor-pointer"
               src={
                 user ? (
-                  user.photoURL
+                  user?.photoURL
                 ) : (
                   <img
                     width="30px"
                     className=" ml-0 pl-0 rounded-full"
                     src={img}
-                    alt=""
+                    alt="hgg"
                   />
                 )
               }
