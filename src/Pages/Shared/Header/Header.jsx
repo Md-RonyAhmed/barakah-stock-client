@@ -75,7 +75,7 @@ const Header = () => {
                   to="/myproducts"
                   className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
-                  {user?.displayName.slice(0,8)} Products
+                  {user?.displayName.slice(0, 8)} Products
                 </CustomLink>
               ) : (
                 ""
@@ -126,9 +126,13 @@ const Header = () => {
               </CustomLink>
             )}
           </li>
-          {user?<p className="text-white rounded border-yellow-500 border-2 px-2 py-1">
-            {user ? user.displayName.slice(0, 8) : ""}
-          </p>:''}
+          {user ? (
+            <p className="text-white rounded border-yellow-500 border-2 px-2 py-1">
+              {user ? user.displayName.slice(0, 8) : ""}
+            </p>
+          ) : (
+            ""
+          )}
           {user ? (
             <img
               width="30px"
@@ -172,7 +176,7 @@ const Header = () => {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full z-10">
+            <div className="absolute top-0 left-0 w-full h-screen overflow-auto z-10">
               <div className="p-5 bg-blue-800 border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -218,6 +222,44 @@ const Header = () => {
                         Products
                       </a>
                     </li>
+                    {user ? (
+                      <li>
+                        {user ? (
+                          <Link
+                            to="/manage"
+                            className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:bg-slate-200 p-4 pb-3 block"
+                          >
+                            Manage
+                          </Link>
+                        ) : (
+                          ""
+                        )}
+
+                        {user ? (
+                          <Link
+                            to="/add"
+                            className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 pb-3 block"
+                          >
+                            Add
+                          </Link>
+                        ) : (
+                          ""
+                        )}
+
+                        {user ? (
+                          <Link
+                            to="/myproducts"
+                            className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:bg-slate-200 p-4 pb-3 block"
+                          >
+                            {user?.displayName.slice(0, 8)} Products
+                          </Link>
+                        ) : (
+                          ""
+                        )}
+                      </li>
+                    ) : (
+                      ""
+                    )}
                     <li>
                       <a
                         href="/#dealers"
@@ -243,12 +285,21 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/login"
-                        className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500 hover:bg-slate-200 p-4 block"
-                      >
-                        LogIn
-                      </Link>
+                      {user ? (
+                        <button
+                          className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl font-medium rounded-3xl text-sm px-3 py-2 pb-2 text-center"
+                          onClick={handleSignOut}
+                        >
+                          LogOut
+                        </button>
+                      ) : (
+                        <Link
+                          to="/login"
+                          className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:bg-slate-200 p-4 block"
+                        >
+                          LogIn
+                        </Link>
+                      )}
                     </li>
                   </ul>
                 </nav>
