@@ -5,7 +5,7 @@ export const CustomLink = ({ children, to, ...props }) => {
   let match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <div>
+    <>
       <Link
         style={{
             
@@ -18,6 +18,6 @@ export const CustomLink = ({ children, to, ...props }) => {
         {children}
       </Link>
       {match && ""}
-    </div>
+    </>
   );
 };

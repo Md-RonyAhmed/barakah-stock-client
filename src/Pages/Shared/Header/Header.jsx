@@ -49,34 +49,34 @@ const Header = () => {
           {user ? (
             <li className="space-x-5">
               {user ? (
-                <Link
+                <CustomLink
                   to="/manage"
                   className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
                   Manage
-                </Link>
+                </CustomLink>
               ) : (
                 ""
               )}
 
               {user ? (
-                <Link
+                <CustomLink
                   to="/add"
                   className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
                   Add
-                </Link>
+                </CustomLink>
               ) : (
                 ""
               )}
 
               {user ? (
-                <Link
+                <CustomLink
                   to="/myproducts"
                   className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-yellow-500  hover:border-orange-500 hover:pb-1"
                 >
                   My Products
-                </Link>
+                </CustomLink>
               ) : (
                 ""
               )}
