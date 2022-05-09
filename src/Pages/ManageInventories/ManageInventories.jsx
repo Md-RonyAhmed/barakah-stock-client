@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
-import ManageInventory from "../ManageInventory/ManageInventory";
 import Loading from "../Shared/Loading/Loading";
+
 const ManageInventories = () => {
   const [products, setProducts] = useState([]);
+   const [updated, setUpdated] = useState(false);
   const [limit, setLimit] = useState(10);
   const [pageNumber, setPageNumber] = useState(0);
-  const [updated, setUpdated] = useState(false);
   const [totalPage, setTotalPage] = useState(0);
 
   useEffect(() => {
+    
     (async () => {
       const { data } = await axios.get(
         `http://localhost:5000/products?limit=${limit}&pageNumber=${pageNumber}`
@@ -20,11 +21,24 @@ const ManageInventories = () => {
         setProducts([]);
         return toast.error(data.error);
       }
-     
       setProducts(data.data);
       setTotalPage(Math.ceil(90 / limit));
     })();
-  }, [limit, pageNumber,updated]);
+  }, [limit, pageNumber, updated]);
+
+  const handleDelete = (id) => {
+    (async () => {
+      const { data } = await axios.delete(
+        `http://localhost:5000/products/${id}`
+      );
+
+      if (!data.success) return toast.error(data.error);
+
+      toast.success(data.message);
+      setUpdated(!updated);
+    })();
+  };
+
   return (
     <>
       <div className="flex flex-col">
@@ -67,20 +81,35 @@ const ManageInventories = () => {
                     <th
                       scope="col"
                       className="text-sm font-medium text-gray-900 px-6 py-4 text-left"
-                    >
-                      
-                    </th>
+                    ></th>
                   </tr>
                 </thead>
                 <tbody>
-                  {products?.length ? (
-                    products.map((product) => (
-                      <ManageInventory
-                        key={product._id}
-                        product={product}
-                      ></ManageInventory>
-                    ))
-                  ) : (
+                  {products?.length ? (products.map((product) => {
+                    return (
+                      <tr class="bg-white border-b  dark:border-gray-700">
+                        <td class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                          {product.name}
+                        </td>
+                        <td class="px-6 py-4">
+                          <img className="w-20" src={product.img} alt="" />
+                        </td>
+                        <td class="px-6 py-4">{product.price}</td>
+                        <td class="px-6 py-4">{product.quantity}</td>
+                        <td class="px-6 py-4">{product.dealer}</td>
+
+                        <td class="px-6 py-4 text-right">
+                          <button
+           
+                            class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                            onClick={() => handleDelete(product._id)}
+                            alt=""
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>);
+                  })) : (
                     <div className="md:ml-[500px]">
                       <Loading></Loading>
                     </div>
@@ -113,6 +142,7 @@ const ManageInventories = () => {
       </div>
     </>
   );
+    
 };
 
 export default ManageInventories;
