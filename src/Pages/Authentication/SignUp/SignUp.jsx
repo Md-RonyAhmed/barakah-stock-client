@@ -12,9 +12,9 @@ import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [agree, setAgree] = useState(false);
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword,loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
   const navigate = useNavigate();
 let errorElement;
   if (loading || updating) {
