@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import AddProduct from "./Pages/AddProduct/AddProduct";
 import RequireAuth from "./Pages/Authentication/RequireAuth/RequireAuth";
 import SignIn from "./Pages/Authentication/SignIn/SignIn";
 import SignUp from "./Pages/Authentication/SignUp/SignUp";
@@ -43,6 +44,14 @@ function App() {
           element={
             <RequireAuth>
               <ManageInventories />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/add"
+          element={
+            <RequireAuth>
+              <AddProduct />
             </RequireAuth>
           }
         ></Route>
