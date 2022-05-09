@@ -16,7 +16,7 @@ const ManageInventories = () => {
     
     (async () => {
       const { data } = await axios.get(
-        `http://localhost:5000/products?limit=${limit}&pageNumber=${pageNumber}`
+        `https://barakah-stocks-server.herokuapp.com/products?limit=${limit}&pageNumber=${pageNumber}`
       );
 
       if (!data?.success) {
@@ -33,7 +33,7 @@ const ManageInventories = () => {
     if (proceed) {
       (async () => {
         const { data } = await axios.delete(
-          `http://localhost:5000/products/${id}`
+          `https://barakah-stocks-server.herokuapp.com/products/${id}`
         );
 
         if (!data.success) return toast.error(data.error);

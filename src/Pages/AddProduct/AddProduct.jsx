@@ -16,7 +16,7 @@ const AddProduct = () => {
 
      try {
        const { data } = await axios.post(
-         "http://localhost:5000/products",
+         "https://barakah-stocks-server.herokuapp.com/products",
          product
        );
 
@@ -25,6 +25,7 @@ const AddProduct = () => {
        }
 
        toast.success(data.message);
+       event.target.reset();
      } catch (error) {
        toast.error(error.message);
      }
@@ -113,7 +114,7 @@ const AddProduct = () => {
              >
                Description
              </label>
-             <input
+             <textarea
                className="border py-2 px-3 text-grey-800 border-white bg-transparent"
                type="text"
                name="desc"
