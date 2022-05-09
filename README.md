@@ -13,7 +13,6 @@
 <li>MongoDB NoSql database as DB</li>
 
 ### Site Features and Functionalities
-
 <li>This is a stock management or inventory management website.</li>
 <li>This website is fully Responsive for desktop, tablet and mobile devices.</li>
 <li>We can see the latest blogs here.</li>
