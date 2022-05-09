@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const ManageInventories = () => {
   const [products, setProducts] = useState([]);
    const [updated, setUpdated] = useState(false);
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(15);
   const [pageNumber, setPageNumber] = useState(0);
   const [totalPage, setTotalPage] = useState(0);
 
@@ -149,6 +149,11 @@ const ManageInventories = () => {
                 <option value="10">10</option>
                 <option value="15">15</option>
                 <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
               </select>
             </div>
           </div>

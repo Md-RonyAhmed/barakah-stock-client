@@ -1,7 +1,34 @@
+import axios from 'axios';
 import React from 'react';
+import { toast } from 'react-toastify';
 import img from '../../Assets/Images/logo/logo.png';
 const AddProduct = () => {
-  
+   const handleSubmit = async (event) => {
+     event.preventDefault();
+     const product = {
+       name: event.target.product_name.value,
+       price: event.target.price.value,
+       img: event.target.image.value,
+       dealer: event.target.dealer.value,
+       quantity: event.target.quantity.value,
+       desc: event.target.desc.value
+     };
+
+     try {
+       const { data } = await axios.post(
+         "http://localhost:5000/products",
+         product
+       );
+
+       if (!data.success) {
+         return toast.error(data.error);
+       }
+
+       toast.success(data.message);
+     } catch (error) {
+       toast.error(error.message);
+     }
+   };
    return (
      <div className="md:flex justify-center items-center h-full w-full mx-auto bg-gradient-to-tl from-green-300 to-indigo-500">
        <div className="md:w-1/2 bg-white rounded shadow-2xl p-8 my-6 bg-transparent border-y-2">
@@ -11,7 +38,7 @@ const AddProduct = () => {
          <h1 className="block w-full text-center text-gray-800 text-2xl font-bold mb-6">
            Add New Product
          </h1>
-         <form>
+         <form onSubmit={handleSubmit}>
            <div className="flex flex-col mb-4">
              <label className="mb-2 font-bold text-lg text-gray-900">
                Product Name
