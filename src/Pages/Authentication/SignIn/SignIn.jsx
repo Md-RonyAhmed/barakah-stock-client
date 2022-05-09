@@ -61,7 +61,7 @@ const SignIn = () => {
         <div className="flex flex-col items-center justify-center w-full">
           <form
             onSubmit={handleSubmit}
-            className="bg-white shadow rounded lg:w-2/5  md:w-1/2 w-full h-auto p-10 mt-16"
+            className="bg-white shadow-2xl bg-transparent rounded lg:w-2/5  md:w-1/2 w-full h-auto p-10 mt-16"
           >
             <div className="flex items-center justify-center">
               <img

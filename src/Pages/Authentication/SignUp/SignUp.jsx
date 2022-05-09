@@ -44,9 +44,9 @@ let errorElement;
         <div className="flex flex-col items-center justify-center w-full">
           <form
             onSubmit={handleRegister}
-            className="bg-white shadow rounded lg:w-2/5 md:w-1/2 w-full h-auto p-10 mt-16"
+            className="bg-white bg-transparent shadow-2xl rounded lg:w-2/5 md:w-1/2 w-full h-auto p-10 mt-16"
           >
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center bg-transparent">
               <img
                 className="mr-0"
                 height="65px"
@@ -199,7 +199,7 @@ let errorElement;
               <button
                 type="submit"
                 disabled={!agree}
-                className="focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
+                className="focus:ring-2 focus:ring-offset-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full"
               >
                 SIGN UP
               </button>
