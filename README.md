@@ -11,8 +11,10 @@
 <li>Node Js as a Backend Library.</li>
 <li>Express Js as a Backend Framework.</li>
 <li>MongoDB NoSql database as DB</li>
+</ul>
 
 ### Site Features and Functionalities
+<ul>
 <li>This is a stock management or inventory management website.</li>
 <li>This website is fully Responsive for desktop, tablet and mobile devices.</li>
 <li>We can see the latest blogs here.</li>
@@ -22,8 +24,7 @@
 <li>We manage products.</li>
 <li>We can add products.</li>
 <li>We can delete products.</li>
-<li>We can update products.</li>
-</ul>
+<li>We can update products.</li></ul>
 
 ## Used libraries 
 <ol>
