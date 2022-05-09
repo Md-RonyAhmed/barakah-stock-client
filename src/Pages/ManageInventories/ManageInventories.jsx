@@ -118,7 +118,7 @@ const ManageInventories = () => {
 
                         <td class="px-6 py-4 text-right">
                           <button
-                            class="font-medium text-white dark:text-white bg-slate-50 px-3 py-2 rounded-md"
+                            class="font-medium text-white dark:text-white bg-slate-50 px-3 py-3 hover:bg-red-200 rounded-full"
                             onClick={() => handleDelete(product._id)}
                             alt=""
                           >
