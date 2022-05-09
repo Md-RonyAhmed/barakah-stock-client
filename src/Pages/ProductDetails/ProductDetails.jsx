@@ -11,7 +11,7 @@ const ProductDetails = () => {
          <h1>Product details of:{products?.name}</h1>
          <h1>Product details of:{products?._id}</h1>
          <h1>Product details of:{products?.dealer}</h1>
-         <h1>Product details of:{products?.quantity}</h1>
+         <h1>Product details of:{products?.quantity<=0? <button>Stock Out</button>:products?.quantity}</h1>
          <h1>Product details of:{products?.price}</h1>
          <h1>Product details of:{products?.desc}</h1>
       </div>

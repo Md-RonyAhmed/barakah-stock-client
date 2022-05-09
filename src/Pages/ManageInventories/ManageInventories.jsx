@@ -112,7 +112,7 @@ const ManageInventories = () => {
                             alt=""
                           />
                         </td>
-                        <td class="px-6 py-4">{product.price}</td>
+                        <td class="px-6 py-4">{product.price} bdt</td>
                         <td class="px-6 py-4">{product.quantity}</td>
                         <td class="px-6 py-4">{product.dealer}</td>
 
