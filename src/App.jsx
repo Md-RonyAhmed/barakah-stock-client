@@ -8,6 +8,7 @@ import BlogDetails from "./Pages/BlogDetails/BlogDetails";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home/Home";
 import ManageInventories from "./Pages/ManageInventories/ManageInventories";
+import MyProducts from "./Pages/MyProducts/MyProducts";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
@@ -52,6 +53,14 @@ function App() {
           element={
             <RequireAuth>
               <AddProduct />
+            </RequireAuth>
+          }
+        ></Route>
+        <Route
+          path="/myproducts"
+          element={
+            <RequireAuth>
+              <MyProducts />
             </RequireAuth>
           }
         ></Route>
