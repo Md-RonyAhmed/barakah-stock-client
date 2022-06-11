@@ -31,8 +31,8 @@ const AddProduct = () => {
      }
    };
    return (
-     <div className="md:flex justify-center items-center h-full w-full mx-auto bg-gradient-to-tl from-green-300 to-indigo-500">
-       <div className="md:w-1/2 bg-white rounded shadow-2xl p-8 my-6 bg-transparent border-y-2">
+     <div className="md:flex justify-center items-center h-full w-full mx-auto bg-white">
+       <div className="md:w-1/2 bg-white rounded shadow-2xl p-8 my-6 border-y-2">
          <div className="flex items-center justify-center">
            <img className="mr-0" height="65px" width="65px" src={img} alt="" />
          </div>
