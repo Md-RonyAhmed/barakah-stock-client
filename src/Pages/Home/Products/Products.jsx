@@ -18,7 +18,7 @@ const Products = () => {
       }
       setProducts(data?.data);
     })();
-  }, [limit]);
+  }, [limit, url]);
   return (
     <div id="products" className="container px-6 mt-6">
       <div className="border-l-4 mb-0 border-blue-800 p-1 ml-4 pl-2 bg-blue-100">
