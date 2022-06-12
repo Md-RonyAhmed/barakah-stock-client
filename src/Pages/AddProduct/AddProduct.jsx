@@ -31,8 +31,8 @@ const AddProduct = () => {
      }
    };
    return (
-     <div className="md:flex justify-center items-center h-full w-full mx-auto bg-white">
-       <div className="md:w-1/2 bg-white rounded shadow-2xl p-8 my-6 border-y-2">
+     <div className="md:flex justify-center items-center h-full w-full mx-auto">
+       <div className="md:w-1/2 bg-slate-100 rounded shadow-inner p-8 my-6 border-y-2 w-4/5 mx-auto">
          <div className="flex items-center justify-center">
            <img className="mr-0" height="65px" width="65px" src={img} alt="" />
          </div>
@@ -45,7 +45,7 @@ const AddProduct = () => {
                Product Name
              </label>
              <input
-               className="border border-white py-2 px-3 text-grey-800 bg-transparent"
+               className="border-2 border-gray-200 rounded-md py-2 px-3 text-grey-800 bg-transparent"
                type="text"
                name="product_name"
                id="first_name"
@@ -59,7 +59,7 @@ const AddProduct = () => {
                Price
              </label>
              <input
-               className="border py-2 px-3 text-grey-800 border-white bg-transparent"
+               className="py-2 px-3 text-grey-800 border-2 border-gray-200 rounded-md bg-transparent"
                type="number"
                name="price"
                id="last_name"
@@ -73,7 +73,7 @@ const AddProduct = () => {
                Quantity
              </label>
              <input
-               className="border py-2 px-3 text-grey-800 border-white bg-transparent"
+               className="py-2 px-3 text-grey-800 border-2 border-gray-200 rounded-md bg-transparent"
                type="number"
                name="quantity"
                id="last_name"
@@ -87,7 +87,7 @@ const AddProduct = () => {
                Dealer Name
              </label>
              <input
-               className="border py-2 px-3 text-grey-800 border-white bg-transparent"
+               className="py-2 px-3 text-grey-800 border-2 border-gray-200 rounded-md bg-transparent"
                type="text"
                name="dealer"
                id="last_name"
@@ -101,7 +101,7 @@ const AddProduct = () => {
                Image URL
              </label>
              <input
-               className="border py-2 px-3 text-grey-800 border-white bg-transparent"
+               className=" py-2 px-3 text-grey-800 border-2 border-gray-200 rounded-md bg-transparent"
                type="text"
                name="image"
                id="last_name"
@@ -115,14 +115,15 @@ const AddProduct = () => {
                Description
              </label>
              <textarea
-               className="border py-2 px-3 text-grey-800 border-white bg-transparent"
+               className=" py-2 px-3 text-grey-800 border-2 border-gray-200 rounded-md bg-transparent"
                type="text"
                name="desc"
                id="last_name"
+               rows='5'
              />
            </div>
            <button
-             className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 block w-1/3"
+             className="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 block w-full"
              type="submit"
            >
              SUBMIT

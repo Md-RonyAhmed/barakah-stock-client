@@ -40,8 +40,8 @@ let errorElement;
   };
   return (
     <div>
-      <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
-        <div className="flex flex-col items-center justify-center w-full">
+      <div className="h-full w-full py-16 px-4">
+        <div className="flex flex-col items-center justify-center w-11/12 mx-auto md:w-full lg:w-full">
           <form
             onSubmit={handleRegister}
             className="bg-white bg-transparent shadow-2xl rounded lg:w-2/5 md:w-1/2 w-full h-auto p-10 mt-16"
@@ -74,14 +74,6 @@ let errorElement;
                 LogIn here
               </Link>
             </p>
-            <SocialLogin></SocialLogin>
-            <div className="w-full flex items-center justify-between py-5">
-              <hr className="w-full bg-gray-400" />
-              <p className="text-base font-medium leading-4 px-2.5 text-gray-400">
-                OR
-              </p>
-              <hr className="w-full bg-gray-400" />
-            </div>
             <div>
               <label
                 id="name"
@@ -204,6 +196,14 @@ let errorElement;
                 SIGN UP
               </button>
             </div>
+            <div className="w-full flex items-center justify-between py-5 pb-0 mb-0">
+              <hr className="w-full bg-gray-400" />
+              <p className="text-base font-medium leading-4 px-2.5 text-gray-400">
+                OR
+              </p>
+              <hr className="w-full bg-gray-400" />
+            </div>
+            <SocialLogin></SocialLogin>
           </form>
         </div>
       </div>

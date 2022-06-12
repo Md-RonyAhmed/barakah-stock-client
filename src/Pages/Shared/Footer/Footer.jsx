@@ -2,7 +2,7 @@ import React from 'react';
 import img from '../../../Assets/Images/logo/logo.png';
 const Footer = () => {
    return (
-     <footer className="text-center lg:text-left bg-blue-900 text-white">
+     <footer className="text-center lg:text-left bg-blue-900 text-white z-50 relative">
        <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
          <div className="mr-12 hidden lg:block">
            <span>Get connected with us on social networks:</span>

@@ -57,8 +57,8 @@ const SignIn = () => {
 
   return (
     <div>
-      <div className="h-full bg-gradient-to-tl from-green-400 to-indigo-900 w-full py-16 px-4">
-        <div className="flex flex-col items-center justify-center w-full">
+      <div className="h-full w-full py-16 px-4">
+        <div className="flex flex-col items-center justify-center w-11/12 mx-auto md:w-full lg:w-full">
           <form
             onSubmit={handleSubmit}
             className="bg-white shadow-2xl bg-transparent rounded lg:w-2/5  md:w-1/2 w-full h-auto p-10 mt-16"

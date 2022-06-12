@@ -5,39 +5,42 @@ import { useProductDetails } from "../../hooks/useProductDetails";
 
 const ProductDetails = () => {
   const { id } = useParams();
-   const [products] = useProductDetails(id);
-   const [product, setProduct] = useState({});
-    const [updated, setUpdated] = useState(false);
- const handleUpdateProduct = (event) => {
-   event.preventDefault();
+  const [products] = useProductDetails(id);
+  const [product, setProduct] = useState({});
+  const [updated, setUpdated] = useState(false);
+  const handleUpdateProduct = (event) => {
+    event.preventDefault();
     const quantity = parseInt(products?.quantity) - 1;
-    
+
     const newQuantity = quantity;
 
-   const updatedProduct = newQuantity;
+    const updatedProduct = newQuantity;
     console.log(updatedProduct);
-   // send data to the server
-   const url = `https://barakah-stocks-server.herokuapp.com/products/${id}`;
-   fetch(url, {
-     method: "PUT",
-     headers: {
-        "content-type": "application/json",
-        
-     },
-     body: JSON.stringify({updatedProduct}),
-   },[updated,product])
-     .then((res) => res.json())
+    // send data to the server
+    const url = `https://barakah-stocks-server.herokuapp.com/products/${id}`;
+    fetch(
+      url,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ updatedProduct }),
+      },
+      [updated, product]
+    )
+      .then((res) => res.json())
       .then((data) => {
-         setProduct(data?.data);
-         console.log(data?.data)
-         setUpdated(!updated);
+        setProduct(data?.data);
+        console.log(data?.data);
+        setUpdated(!updated);
         toast.success("Product Delivered successfully!!!");
-     });
- };
+      });
+  };
   return (
     <div>
-      <div className="p-5 w-full bg-gradient-to-tl from-green-300 to-indigo-500">
-        <div className="mx-auto md:w-2/5 bg-transparent rounded-md shadow-2xl p-3">
+      <div className="p-5 pr-0 w-full md:flex lg:flex block">
+        <div className="mx-6 md:w-2/5 bg-transparent rounded-md shadow-2xl p-3">
           <div className=" mx-auto bg-gray-300 w-full rounded-md">
             <img className="w-full rounded-md" src={products?.img} alt="" />
           </div>
@@ -77,7 +80,7 @@ const ProductDetails = () => {
             Delivered
           </button>
         </div>
-        <div className="block p-6 rounded-lg shadow-2xl bg-transparent max-w-sm mx-auto my-8">
+        <div className="h-1/3 md:fixed lg:fixed top-24 left-[600px] p-6 rounded-lg shadow-2xl bg-white z-10 my-8 mx-3">
           <form>
             <div className="form-group mb-6">
               <input
