@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [limit, setLimit] = useState(6);
-  const url = `https://barakah-stocks-server.herokuapp.com/products?limit=${limit}`;
+  const url = `https://barakah-stock-server.onrender.com/products?limit=${limit}`;
   useEffect(() => {
     (async () => {
       const { data } = await axios.get(url);

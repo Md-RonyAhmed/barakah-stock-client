@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 export const useProductDetails = (id) => {
    const [products, setProducts] = useState([]);
-   const url = `https://barakah-stocks-server.herokuapp.com/products/${id}`;
+   const url = `https://barakah-stock-server.onrender.com/products/${id}`;
    useEffect(() => {
       (async () => {
          const { data } = await axios.get(url);

@@ -17,7 +17,7 @@ const ProductDetails = () => {
     const updatedProduct = newQuantity;
     console.log(updatedProduct);
     // send data to the server
-    const url = `https://barakah-stocks-server.herokuapp.com/products/${id}`;
+    const url = `https://barakah-stock-server.onrender.com/products/${id}`;
     fetch(
       url,
       {

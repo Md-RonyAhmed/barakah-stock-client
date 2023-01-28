@@ -16,7 +16,7 @@ const AddProduct = () => {
 
      try {
        const { data } = await axios.post(
-         "https://barakah-stocks-server.herokuapp.com/products",
+         "https://barakah-stock-server.onrender.com/products",
          product
        );
 
